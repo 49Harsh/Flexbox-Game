@@ -3,7 +3,7 @@ import red from '../assests/red.jpg';
 import blue from '../assests/blue.jpg';
 import purple from '../assests/purple.jpg';
 import { Helmet } from 'react-helmet';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link,} from 'react-router-dom';
 
 
 const Levelone = () => {

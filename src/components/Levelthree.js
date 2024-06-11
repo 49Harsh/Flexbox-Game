@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import red from '../assests/red.jpg';
-import blue from '../assests/blue.jpg';
-import purple from '../assests/purple.jpg';
+
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
