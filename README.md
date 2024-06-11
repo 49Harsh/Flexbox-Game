@@ -71,5 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 <p>
-hi here is the name of don 
+hi 
 </p>
