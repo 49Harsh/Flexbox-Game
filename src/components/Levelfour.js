@@ -3,6 +3,7 @@ import red from '../assests/red.jpg';
 import blue from '../assests/blue.jpg';
 import purple from '../assests/purple.jpg';
 
+
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
@@ -97,40 +98,6 @@ const Levelthree = ({ isOpen, onClose}) => {
 
 
               {/* <div className=' mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
-                <h2 className='text-bold text-3xl '>About justify-content</h2>
-                <h3>
-                The justify-content property in CSS is used within flex containers 
-                to define how space is distributed between the main-axis 
-                </h3>
-                <p>
-                  1. start: Items are aligned to the start of the container 
-                  (left for a row layout, top for a column layout).
-                </p>
-                <p>
-                  2. end: Items are aligned to the end of the container 
-                  (right for a row layout, bottom for a column layout).
-                </p>
-
-                <p>
-                  3. center: Items are centered along the main-axis.
-                </p>
-
-                <p>
-                  4. space-between: Items are evenly distributed along the main-axis, 
-                  with the first item at the start and the last item at the end.
-                </p>
-
-                <p>
-                  5. space-around: Items are evenly distributed along the main-axis, with equal space around each item.
-                </p>
-
-                <p>
-                  6. initial: Sets the property to its default value.
-                </p>
-
-                <p>
-                  7. inherit: Inherits the value from its parent element.
-                </p>
               </div> */}
 
 
@@ -149,8 +116,8 @@ const Levelthree = ({ isOpen, onClose}) => {
           </div>
 
 
-            {/* image section */}
-            <div className=" md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300 relative">
+        {/* image section */}
+          <div className=" md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300 relative">
 
             {showImageTwo && 
               <div className="flex w-[500px] h-full md:w-1/2 mb-4 md:mb-0 absolute">
@@ -214,7 +181,9 @@ const Levelthree = ({ isOpen, onClose}) => {
                   />
                 
               </div>
-            </div>
+          </div>
+
+          
 
         </div>
       </div>

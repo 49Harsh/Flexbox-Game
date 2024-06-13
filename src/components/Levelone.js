@@ -120,13 +120,13 @@ const Levelone = () => {
 
 
             {/* image section */}
-            <div className="flex justify-between md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300">
+                        <div className="flex flex-col md:flex-row justify-between w-full p-4 bg-cover bg-center rounded-lg bg-slate-300">
               <div className="flex w-full md:w-1/2 mb-4 md:mb-0">
                 <img
                   src={blue}
                   alt="Blue color bucket"
                   className={`rounded-full ${showImageOne ? 'block' : 'hidden'}`}
-                  style={{ height: '200px', width: '200px' }}
+                  style={{ height: '100px', width: '100px' }} // Adjusted size for mobile
                   color='blue color'
                 />
               </div>
@@ -136,7 +136,7 @@ const Levelone = () => {
                     src={red}
                     alt="Red color bucket"
                     className="rounded-full"
-                    style={{ height: '200px', width: '200px' }}
+                    style={{ height: '100px', width: '100px' }} // Adjusted size for mobile
                     title='red color'
                   />
                 ) : (
@@ -144,7 +144,7 @@ const Levelone = () => {
                     src={purple}
                     alt="Purple color bucket"
                     className="rounded-full"
-                    style={{ height: '200px', width: '200px' }}
+                    style={{ height: '100px', width: '100px' }} // Adjusted size for mobile
                     title='purple'
                   />
                 )}
