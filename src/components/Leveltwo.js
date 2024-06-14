@@ -12,12 +12,14 @@ const Leveltwo = () => {
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
   const [answer, setAnswer] = useState(false);
+  const [forLevel, setForLevel] = useState(true)
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
     if (event.target.value.trim() === 'justify-content:start;' || event.target.value.trim() === ' justify-content: start') {
       setShowImageOne(false);
       setShowImageTwo(false);
+      setForLevel(false);
     } 
   };
 
@@ -34,16 +36,23 @@ const Leveltwo = () => {
       <div className="flex flex-col items-center h-screen w-full bg-slate-900 p-2">
         <div className="flex flex-row justify-center my-2">
           <Link to='/levelone'>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
               Decrease Level
             </button>
           </Link>
 
+          
+          {forLevel ? (
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
+            Level-2
+          </button>
+        ) : (
           <Link to='/levelthree'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
-              Increase Level
+            Go to Level 3
             </button>
           </Link>
+        )}
           
         </div>
 
@@ -59,7 +68,7 @@ const Leveltwo = () => {
                   display: flex;
                 </div>
                 <div className="bg-gray-300 p-2 flex items-center">
-                  justify-content :
+                  
                   <input
                     type="text"
                     placeholder="'Enter here...;'"
@@ -89,7 +98,7 @@ const Leveltwo = () => {
               <div className=' mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
 
               {/* answer section */}
-              <button onClick={answerHandler}>Answer</button>
+              <button onClick={answerHandler} className='border bg-slate-500 rounded-md border-stone-900 px-2 py-1'>Answer</button>
 
               {answer && (<p>justify-content:start;</p>)}
                 
