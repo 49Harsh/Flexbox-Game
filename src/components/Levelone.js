@@ -10,12 +10,15 @@ const Levelone = () => {
   const [inputValue, setInputValue] = useState('');
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
+  const [forLevel, setForLevel] = useState(true)
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    if (event.target.value.trim() === 'justify-content: end;' || event.target.value.trim() === 'justify-content:end;') {
+    if (event.target.value.trim() === 'justify-content: end;' || event.target.value.trim() === 'justify-content:end') {
       setShowImageOne(false);
       setShowImageTwo(false);
+      setShowImageOne(false);
+      setForLevel(false);
     } 
   };
 
@@ -27,17 +30,20 @@ const Levelone = () => {
       </Helmet>
       <div className="flex flex-col items-center h-screen w-full bg-slate-900 p-2">
         <div className="flex flex-row justify-center my-2">
-          <Link to='/'>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
-              Decrease Level
-            </button>
-          </Link>
+          
 
+        {forLevel ? (
+          <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
+            Level-1
+          </button>
+        ) : (
           <Link to='/home/leveltwo'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
               Increase Level
             </button>
           </Link>
+        )}
+
           
         </div>
 
@@ -120,7 +126,7 @@ const Levelone = () => {
 
 
             {/* image section */}
-                        <div className="flex flex-col md:flex-row justify-between w-full p-4 bg-cover bg-center rounded-lg bg-slate-300">
+                        <div className="flex flex-row md:flex-row justify-between w-full p-4 bg-cover bg-center rounded-lg bg-slate-300">
               <div className="flex w-full md:w-1/2 mb-4 md:mb-0">
                 <img
                   src={blue}
