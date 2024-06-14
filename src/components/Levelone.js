@@ -11,16 +11,21 @@ const Levelone = () => {
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
   const [forLevel, setForLevel] = useState(true)
+  const [answer, setAnswer] = useState(false);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    if (event.target.value.trim() === 'justify-content: end;' || event.target.value.trim() === 'justify-content:end') {
+    if (event.target.value.trim() === 'justify-content: end;' || event.target.value.trim() === 'justify-content:end' || event.target.value.trim() === 'justify-content:end' || event.target.value.trim() === 'justify-content:end;')  {
       setShowImageOne(false);
       setShowImageTwo(false);
       setShowImageOne(false);
       setForLevel(false);
     } 
   };
+
+  const answerHandler = () => {
+    setAnswer(!answer);
+  }
 
   return (
     <div>
@@ -121,12 +126,16 @@ const Levelone = () => {
                 <p>
                   7. inherit: Inherits the value from its parent element.
                 </p>
+
+                {/* answer section */}
+                  <button onClick={answerHandler} className='border bg-slate-500 rounded-md border-stone-900 px-2 py-1'>Answer</button>
+                  {answer && (<p>justify-content:end;</p>)}
               </div>
           </div>
 
 
             {/* image section */}
-                        <div className="flex flex-row md:flex-row justify-between w-full p-4 bg-cover bg-center rounded-lg bg-slate-300">
+            <div className="flex justify-between md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300">
               <div className="flex w-full md:w-1/2 mb-4 md:mb-0">
                 <img
                   src={blue}
