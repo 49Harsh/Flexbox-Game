@@ -108,7 +108,7 @@ const Levelthree = ({ isOpen, onClose}) => {
               <div className=' mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
                 {/* answer section */}
                   <button onClick={answerHandler} className='border bg-slate-500 rounded-md border-stone-900 px-2 py-1'>Answer</button>
-                  {answer && (<p>justify-content:start;</p>)}
+                  {answer && (<p>justify-content:center;</p>)}
               </div>
 
 
