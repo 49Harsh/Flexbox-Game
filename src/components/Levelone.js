@@ -135,7 +135,7 @@ const Levelone = () => {
 
 
             {/* image section */}
-            <div className="flex justify-between md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300">
+            <div className="flex justify-between md:flex-row w-full md:w-1/2 h-full p-4 bg-cover bg-center rounded-lg bg-slate-300">
               <div className="flex w-full md:w-1/2 mb-4 md:mb-0">
                 <img
                   src={blue}

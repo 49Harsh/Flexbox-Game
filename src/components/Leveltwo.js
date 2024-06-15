@@ -74,7 +74,7 @@ const Leveltwo = () => {
                     placeholder="'Enter here...;'"
                     value={inputValue}
                     onChange={handleInputChange}
-                    className="ml-2 p-1 bg-gray-300 border-b-1 border-gray-400 focus:outline-none focus:border-blue-500"
+                    className="ml-2 p-1 bg-gray-300 border-b-1 border-gray-400 focus:outline-none w-[190px] lg:w-[250px] focus:border-blue-500"
                     spellcheck="false"
                   />
                 </div>
@@ -107,7 +107,7 @@ const Leveltwo = () => {
 
 
           {/* image section */}
-            <div className="flex justify-between md:flex-row w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300">
+            <div className="flex justify-between md:flex-row h-full lg:h-full w-full md:w-1/2 p-4 bg-cover bg-center rounded-lg bg-slate-300">
 
             {/* image 1 */}
             <div className="flex justify-start w-full md:w-1/2">
@@ -116,7 +116,7 @@ const Leveltwo = () => {
                     src={red}
                     alt="Red color bucket"
                     className="rounded-full"
-                    style={{ height: '200px', width: '200px' }}
+                    style={{ height: '100px', width: '100px' }}
                     title='red-color'
                   />
                 ) : (
@@ -124,7 +124,7 @@ const Leveltwo = () => {
                     src={orange}
                     alt="Purple color bucket"
                     className="rounded-full"
-                    style={{ height: '200px', width: '200px' }}
+                    style={{ height: '100px', width: '100px' }}
                     title='orange-color'
                   />
                 )}
@@ -136,7 +136,7 @@ const Leveltwo = () => {
                   src={yellow}
                   alt="Blue color bucket"
                   className={`rounded-full ${showImageOne ? 'block' : 'hidden'}`}
-                  style={{ height: '200px', width: '200px' }}
+                  style={{ height: '100px', width: '100px' }}
                   title='yellow-color'
                 />
               </div>
