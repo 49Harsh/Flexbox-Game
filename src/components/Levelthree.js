@@ -9,8 +9,9 @@ const Levelthree = ({ isOpen, onClose}) => {
   const [inputValue, setInputValue] = useState('');
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
-  const [isTrue, setIsTrue] = useState(false);
+
   const [answer, setAnswer] = useState(false);
+  const [forLevel, setForLevel] = useState(true)
 
 
 
@@ -19,7 +20,6 @@ const Levelthree = ({ isOpen, onClose}) => {
     if (event.target.value.trim() === 'justify-content:center' || event.target.value.trim() === 'justify-content: center' || event.target.value.trim() ===  'justify-content:center;') {
       setShowImageOne(false);
       setShowImageTwo(false);
-      setIsTrue(true);
     } 
   };
   const answerHandler = () => {
@@ -43,11 +43,18 @@ const Levelthree = ({ isOpen, onClose}) => {
             </button>
           </Link>
 
+          
+          {forLevel ? (
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
+            Level-2
+          </button>
+        ) : (
           <Link to='/levelfour'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
-              Increase Level
+            Go to Level 3
             </button>
           </Link>
+        )}
           
         </div>
 
@@ -104,17 +111,7 @@ const Levelthree = ({ isOpen, onClose}) => {
 
 
           {/* button section */}
-              <div className='flex flex-row justify-center my-4'>
-                <Link to='/levelone'>
-                  <button
-                    className={`py-2 px-4 rounded-md ${
-                      isTrue ? 'block bg-red-900 text-slate-400' : 'hidden '
-                    }`}
-                  >
-                    Go Level-4
-                </button>
-                </Link>
-              </div>
+              
           </div>
 
 
