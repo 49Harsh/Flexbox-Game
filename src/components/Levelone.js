@@ -97,33 +97,33 @@ const Levelone = () => {
                 The justify-content property in CSS is used within flex containers 
                 to define how space is distributed between the main-axis 
                 </h3>
-                <p>
+                <p className='text-xs'>
                   1. start: Items are aligned to the start of the container 
                   (left for a row layout, top for a column layout).
                 </p>
-                <p>
+                <p className='text-xs'>
                   2. end: Items are aligned to the end of the container 
                   (right for a row layout, bottom for a column layout).
                 </p>
 
-                <p>
+                <p className='text-xs'>
                   3. center: Items are centered along the main-axis.
                 </p>
 
-                <p>
+                <p className='text-xs'>
                   4. space-between: Items are evenly distributed along the main-axis, 
                   with the first item at the start and the last item at the end.
                 </p>
 
-                <p>
+                <p className='text-xs'>
                   5. space-around: Items are evenly distributed along the main-axis, with equal space around each item.
                 </p>
 
-                <p>
+                <p className='text-xs'>
                   6. initial: Sets the property to its default value.
                 </p>
 
-                <p>
+                <p className='text-xs'>
                   7. inherit: Inherits the value from its parent element.
                 </p>
 
