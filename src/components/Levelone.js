@@ -54,7 +54,7 @@ const Levelone = () => {
 
         <div className="flex flex-col md:flex-row border-2 w-full h-full bg-white rounded-lg  shadow-lg">
           {/* Code Section */}
-          <div className="flex flex-col w-full md:w-1/2 border-b-2 md:border-b-0 md:border-r-2 p-4 bg-slate-500 rounded-lg">
+          <div className="flex flex-col w-full h-full md:w-1/2 border-b-2 md:border-b-0 md:border-r-2 p-4 bg-slate-500 rounded-lg">
             <div className="flex flex-col ">
               <div className="text-black font-mono ">
                 <div className="bg-gray-300 p-2 rounded-t-lg">
