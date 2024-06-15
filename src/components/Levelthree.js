@@ -79,7 +79,7 @@ const Levelthree = ({ isOpen, onClose}) => {
                     placeholder="'Enter here...;'"
                     value={inputValue}
                     onChange={handleInputChange}
-                    className="ml-2 p-1 bg-gray-300 border-b-1 border-gray-400 focus:outline-0 focus:border-blue-500"
+                    className="ml-2 p-1 bg-gray-300 border-b-1 border-gray-400 w-[190px] lg:w-[250px] focus:outline-0 focus:border-blue-500"
                     spellcheck="false"
                   />
                 </div>
