@@ -18,8 +18,10 @@ const Levelthree = ({ isOpen, onClose}) => {
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
     if (event.target.value.trim() === 'justify-content:center' || event.target.value.trim() === 'justify-content: center' || event.target.value.trim() ===  'justify-content:center;') {
+      
       setShowImageOne(false);
       setShowImageTwo(false);
+      setForLevel(false);
     } 
   };
   const answerHandler = () => {
@@ -46,12 +48,12 @@ const Levelthree = ({ isOpen, onClose}) => {
           
           {forLevel ? (
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
-            Level-2
+            Level-3
           </button>
         ) : (
           <Link to='/levelfour'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-1">
-            Go to Level 3
+            Go to Level 4
             </button>
           </Link>
         )}
