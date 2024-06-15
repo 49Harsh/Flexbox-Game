@@ -10,18 +10,21 @@ const Levelthree = ({ isOpen, onClose}) => {
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
   const [isTrue, setIsTrue] = useState(false);
+  const [answer, setAnswer] = useState(false);
 
 
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    if (event.target.value.trim() === 'justify-content:center' || event.target.value.trim() === 'justify-content: center') {
+    if (event.target.value.trim() === 'justify-content:center' || event.target.value.trim() === 'justify-content: center' || event.target.value.trim() ===  'justify-content:center;') {
       setShowImageOne(false);
       setShowImageTwo(false);
       setIsTrue(true);
     } 
   };
-
+  const answerHandler = () => {
+    setAnswer(!answer);
+  }
 
 
 
@@ -89,45 +92,14 @@ const Levelthree = ({ isOpen, onClose}) => {
 
               <div className='mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
                 <h1 className='text-bold font-bold'>Read carefully...</h1>
-                Move the blue color to the end of the x-axis so that it combines with the red color to create purple. 🟦+🔴 = 🟪
+                You have to take this starting red color over the center’s red color 🔴+🔴 = 🔴
               </div>
 
 
               <div className=' mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
-                <h2 className='text-bold text-3xl '>About justify-content</h2>
-                <h3>
-                The justify-content property in CSS is used within flex containers 
-                to define how space is distributed between the main-axis 
-                </h3>
-                <p>
-                  1. start: Items are aligned to the start of the container 
-                  (left for a row layout, top for a column layout).
-                </p>
-                <p>
-                  2. end: Items are aligned to the end of the container 
-                  (right for a row layout, bottom for a column layout).
-                </p>
-
-                <p>
-                  3. center: Items are centered along the main-axis.
-                </p>
-
-                <p>
-                  4. space-between: Items are evenly distributed along the main-axis, 
-                  with the first item at the start and the last item at the end.
-                </p>
-
-                <p>
-                  5. space-around: Items are evenly distributed along the main-axis, with equal space around each item.
-                </p>
-
-                <p>
-                  6. initial: Sets the property to its default value.
-                </p>
-
-                <p>
-                  7. inherit: Inherits the value from its parent element.
-                </p>
+                {/* answer section */}
+                  <button onClick={answerHandler} className='border bg-slate-500 rounded-md border-stone-900 px-2 py-1'>Answer</button>
+                  {answer && (<p>justify-content:start;</p>)}
               </div>
 
 
