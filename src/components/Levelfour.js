@@ -20,7 +20,7 @@ const Levelthree = ({ }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsPhoneScreen(window.innerWidth >= 768); // Adjust the breakpoint as needed
+      setIsPhoneScreen(window.innerWidth <= 1080); // Adjust the breakpoint as needed
     };
 
     handleResize(); // Check the screen width on component mount
@@ -46,6 +46,10 @@ const Levelthree = ({ }) => {
 
 
   if (isPhoneScreen) {
+    return(
+      <div>this page not support in mobile phone </div>
+    )
+  }else{
   return (
     <div>
       <Helmet>
@@ -209,5 +213,7 @@ const Levelthree = ({ }) => {
   );
 };
 }
+
+
 export default Levelthree;
 
