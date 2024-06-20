@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import red from '../assests/red.jpg';
 import blue from '../assests/blue.jpg';
 import purple from '../assests/purple.jpg';
@@ -9,11 +9,27 @@ import { Link } from 'react-router-dom';
 
 
 
-const Levelthree = ({ isOpen, onClose}) => {
+const Levelthree = ({ }) => {
   const [inputValue, setInputValue] = useState('');
   const [showImageOne, setShowImageOne] = useState(true);
   const [showImageTwo, setShowImageTwo] = useState(true);
   const [isTrue, setIsTrue] = useState(false);
+  const [isPhoneScreen, setIsPhoneScreen] = useState(false);
+
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPhoneScreen(window.innerWidth >= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Check the screen width on component mount
+    window.addEventListener('resize', handleResize); // Listen for window resize events
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up the event listener
+    };
+  }, []);
 
 
 
@@ -29,7 +45,7 @@ const Levelthree = ({ isOpen, onClose}) => {
 
 
 
-
+  if (isPhoneScreen) {
   return (
     <div>
       <Helmet>
@@ -146,8 +162,8 @@ const Levelthree = ({ isOpen, onClose}) => {
                   alt="Blue color bucket"
                   className={`rounded-full border-2 border-slate-600 animate-spin ${showImageOne ? 'block' : 'hidden'}`}
                   style={{
-                    width: window.innerWidth < 1080 ? '100px' : '150px',
-                    height: window.innerWidth < 1080 ? '100px' : '150px',
+                    width: '150px',
+                    height:  '150px',
                   }}
                   color='blue color'
                 />
@@ -192,6 +208,6 @@ const Levelthree = ({ isOpen, onClose}) => {
     </div>
   );
 };
-
+}
 export default Levelthree;
 
