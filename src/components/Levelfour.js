@@ -93,7 +93,7 @@ const Levelthree = ({ isOpen, onClose}) => {
 
               <div className='mt-4 mx-1  w-full sm p-4 bg-cover bg-center rounded-lg bg-slate-400'>
                 <h1 className='text-bold font-bold'>Read carefully...</h1>
-                Move the blue color to the end of the x-axis so that it combines with the red color to create purple. 🟦+🔴 = 🟪
+                You want to place the rotated image on top of the static image. Think about which property will be used.
               </div>
 
 
@@ -126,8 +126,8 @@ const Levelthree = ({ isOpen, onClose}) => {
                   alt="Blue color bucket"
                   className={`rounded-full border-2 border-slate-600 animate-spin ${showImageOne ? 'block' : 'hidden'}`}
                   style={{
-                    width: window.innerWidth < 1080 ? '100px' : '150px',
-                    height: window.innerWidth < 1080 ? '100px' : '150px',
+                    width:'150px',
+                    height:'150px',
                   }}
                   color='blue color'
                 />
@@ -136,8 +136,8 @@ const Levelthree = ({ isOpen, onClose}) => {
                   alt="Blue color bucket"
                   className={`rounded-full border-2 border-slate-600 animate-spin ${showImageOne ? 'block' : 'hidden'}`}
                   style={{
-                    width: window.innerWidth < 1080 ? '100px' : '150px',
-                    height: window.innerWidth < 1080 ? '100px' : '150px',
+                    width: '150px',
+                    height:  '150px',
                   }}
                   color='blue color'
                 />
